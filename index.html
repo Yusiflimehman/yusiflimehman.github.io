@@ -1,51 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="az">
 <head>
-    <title>Mehman Yusifli</title>
-    <style>
-        body {
-            background-color: #111;
-            color: white;
-            text-align: center;
-            font-family: Arial;
-            padding-top: 100px;
-        }
-        h1 {
-            font-size: 50px;
-            color: #00ffcc;
-        }
-        p {
-            font-size: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #00ffcc;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mehman Yusifli | Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111827;
+      --muted:#9ca3af;
+      --text:#e5e7eb;
+      --accent:#00ffcc;
+      --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(900px 500px at 20% 10%, rgba(0,255,204,.12), transparent 60%),
+                  radial-gradient(900px 500px at 80% 0%, rgba(59,130,246,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:28px 16px 60px;}
+    .top{
+      display:flex; gap:16px; align-items:center; justify-content:space-between;
+      padding:18px 18px;
+      border:1px solid var(--border);
+      background:rgba(17,24,39,.65);
+      backdrop-filter: blur(10px);
+      border-radius:16px;
+    }
+    .brand h1{margin:0; font-size:28px; letter-spacing:.2px}
+    .brand p{margin:6px 0 0; color:var(--muted)}
+    .pill{
+      display:inline-flex; gap:8px; flex-wrap:wrap; margin-top:10px;
+    }
+    .tag{
+      font-size:12px; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--text); background:rgba(255,255,255,.03);
+    }
+    .btns{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    a.btn{
+      text-decoration:none; color:#061018;
+      background:var(--accent);
+      padding:10px 12px; border-radius:10px; font-weight:700;
+      border:1px solid rgba(0,0,0,.15);
+    }
+    a.btn.secondary{
+      background:transparent; color:var(--text);
+      border:1px solid var(--border);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 860px){
+      .top{flex-direction:column; align-items:flex-start}
+      .btns{justify-content:flex-start}
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(17,24,39,.55);
+      border-radius:16px;
+      padding:16px;
+    }
+    .card h2{margin:0 0 10px; font-size:18px}
+    .muted{color:var(--muted); line-height:1.5}
+
+    .list{margin:0; padding-left:18px}
+    .list li{margin:8px 0; color:var(--text)}
+    .list li span{color:var(--muted)}
+    
+    .video{
+      margin-top:10px;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#000;
+    }
+    iframe{width:100%; height:340px; border:0}
+    @media (max-width: 500px){
+      iframe{height:240px}
+    }
+
+    .footer{
+      margin-top:18px; text-align:center; color:var(--muted); font-size:13px;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
 
-    <h1>Mehman Yusifli 🚀</h1>
-    <p>Data Analyst | SQL | Python | Power BI</p>
-    <p>Bu mənim ilk internet saytımdır 🔥</p>
+    <div class="top">
+      <div class="brand">
+        <h1>Mehman Yusifli 🚀</h1>
+        <p>Data Analyst • SQL • Python • Power BI</p>
+        <div class="pill">
+          <span class="tag">Portfolio</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">Azerbaijan</span>
+        </div>
+      </div>
 
-    <button onclick="alert('Saytıma xoş gəldin!')">
-        Mənə klik et
-  </button>
+      <div class="btns">
+        <a class="btn secondary" href="https://github.com/Yusiflimehman" target="_blank">GitHub</a>
+        <a class="btn secondary" href="#" target="_blank">LinkedIn</a>
+        <a class="btn" href="mailto:example@mail.com">Email</a>
+      </div>
+    </div>
 
-<h2>Sevdiyim Mahnı 🎵</h2>
+    <div class="grid">
+      <div class="card">
+        <h2>Haqqımda</h2>
+        <p class="muted">
+          Mən data analitika sahəsində inkişaf edirəm. SQL, Python və Power BI ilə
+          analizlər və dashboardlar hazırlayıram. Bu sayt mənim şəxsi portfoliomdur.
+        </p>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/1miwaIZwJbk"
-frameborder="0"
-allowfullscreen>
-</iframe>
+        <h2 style="margin-top:14px;">Bacarıqlar</h2>
+        <ul class="list">
+          <li>SQL <span>— query, join, aggregation</span></li>
+          <li>Python <span>— pandas, data cleaning</span></li>
+          <li>Power BI <span>— dashboard, DAX</span></li>
+          <li>Machine Learning <span>— əsas modellər</span></li>
+        </ul>
+      </div>
 
+      <div class="card">
+        <h2>Əlaqə</h2>
+        <p class="muted" style="margin-top:0;">
+          İstəsən, LinkedIn və email hissəsini öz məlumatlarınla dolduraq.
+        </p>
 
+        <h2 style="margin-top:14px;">Sevdiyim Mahnı 🎵</h2>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/1miwaIZwJbk"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> Mehman Yusifli • Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
